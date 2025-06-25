@@ -1,1 +1,1 @@
-# Modeling of Photonic Neural Networks Using Simphony
+# Modeling of Photonic Neural Networks Using SAX
