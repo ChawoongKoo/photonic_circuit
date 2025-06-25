@@ -2,6 +2,9 @@ import sax
 import jax
 import jax.numpy as jnp
 
+# NOTE 
+# Create a component class later on to organize these models
+
 # NOTE
 # Sdicts are a datatype in SAX that are essentially dictionary objects.
 # The keys are different combination of input/output ports and the values 
