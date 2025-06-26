@@ -6,7 +6,7 @@ import jax.numpy as jnp
 import jax.example_libraries.optimizers as opt
 import sax
 import matplotlib.pyplot as plt
-from models import coupler, waveguide, mzi
+from models import coupler, waveguide, mzi, mzi_chain
 import tqdm
 
 # Basic simulation of an MZI's transmission for various wavelengths of input light
@@ -74,3 +74,21 @@ def gradient_sim():
 
 # gradient_sim()
 
+def chain_simulation():
+    chain = mzi_chain(num_mzis=15)
+    # Settings gives us a dict of the arguments/params for each component in our chain 
+    # Think length coupling ratio of the couplers or length/width of the waveguides
+    # We can then pass them into our circuit into **kwargs
+    settings = sax.get_settings(chain)
+    for dc in settings:
+        settings[dc]["top"]["length"] = 25.
+        settings[dc]["bot"]["length"] = 15.
+    settings = sax.update_settings(settings=settings, w1=jnp.linspace(1.5,1.6, 1000))
+
+    s_matrix = sax.sdict(chain(**settings))
+    plt.plot(1e3 * settings["dc0"]["top"]["w1"], jnp.abs(s_matrix["in0", "out0"])**2)
+    plt.xlabel("nm")
+    plt.ylabel("T")
+    plt.show()
+
+chain_simulation()

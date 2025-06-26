@@ -114,7 +114,10 @@ def mzi_chain(num_mzis=1) -> sax.Model:
         },
         models={"dc_with_arms": dc_with_arms},
         backend="klu",
+        # Return type being SDict for sparse matrix
+        # or SDense for dense matrix, among others
         return_type="SDense"
     )
+    # Makes 'chain' return an sdict object when called
     return sax.sdict(chain)
 
