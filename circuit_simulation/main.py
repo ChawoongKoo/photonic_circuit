@@ -20,7 +20,7 @@ def basic_sim():
     plt.ylabel("T")
     plt.show()
 
-# basic_sim()
+basic_sim()
 
 # Simulation of adjusting the length of the top waveguide in an MZI 
 # so that it blocks transmission of 1550 nm light. Uses gradient descent.
