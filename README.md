@@ -10,3 +10,5 @@ Sunil Pai et al. Experimentally realized in situ backpropagation for deep learni
 Bogaerts, W., Pérez, D., Capmany, J. et al. Programmable photonic circuits. Nature 586, 207–216 (2020). https://doi.org/10.1038/s41586-020-2764-0
 
 Tyler W. Hughes, Momchil Minkov, Yu Shi, and Shanhui Fan. Training of photonic neural networks through in situ backpropagation and gradient measurement. Optica 5, 864-871 (2018). https://doi.org/10.1364/OPTICA.5.000864
+
+David A. B. Miller. Self-configuring universal linear optical component. Photon. Res. 1, 1-15 (2013). https://doi.org/10.1364/PRJ.1.000001 
