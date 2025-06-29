@@ -7,6 +7,8 @@ Eveline R. W. van Doremaele et al. Hardware implementation of backpropagation us
 
 Sunil Pai et al. Experimentally realized in situ backpropagation for deep learning in photonic neural networks. Science 380, 398-404 (2023). https://doi.org/10.1126/science.ade8450
 
+Cheng, J.; Zhou, H.; Dong, J. Photonic Matrix Computing: From Fundamentals to Applications. Nanomaterials 2021, 11, 1683 (2021). https://doi.org/10.3390/nano11071683
+
 Bogaerts, W., Pérez, D., Capmany, J. et al. Programmable photonic circuits. Nature 586, 207–216 (2020). https://doi.org/10.1038/s41586-020-2764-0
 
 Tyler W. Hughes, Momchil Minkov, Yu Shi, and Shanhui Fan. Training of photonic neural networks through in situ backpropagation and gradient measurement. Optica 5, 864-871 (2018). https://doi.org/10.1364/OPTICA.5.000864
