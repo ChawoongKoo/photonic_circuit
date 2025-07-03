@@ -26,11 +26,11 @@ def coupler(coupling=0.5) -> sax.SDict:
 
 # definition of a simple waveguide
 # returns the transmission through the waveguide
-def waveguide(w1=1.55, w10=1.55, neff=2.34, ng=3.4, length=10, loss=0.) -> sax.SDict:
-    dw1 = w1 - w10
-    dneff_dw1 = (ng - neff) / w10
-    neff = neff - (dw1 * dneff_dw1)
-    phase = 2*jnp.pi *neff*length/w1
+def waveguide(wl=1.55, wl0=1.55, neff=2.34, ng=3.4, length=10, loss=0.) -> sax.SDict:
+    dwl = wl - wl0
+    dneff_dwl = (ng - neff) / wl0
+    neff = neff - (dwl * dneff_dwl)
+    phase = 2*jnp.pi *neff*length/wl
     amplitude = jnp.asarray(10**(-loss*length/20), dtype=complex)
 
     transmission = amplitude*jnp.exp(1j*phase)
